@@ -61,5 +61,5 @@ describe "Array#choose" do
     it "raises exception if receives incorrect argument" do
       expect { people.choose([27, 29]) }.to raise_error ArgumentError
     end
-  end 
+  end
 end
