@@ -29,35 +29,30 @@ nick = Person.new("Nick", "Designer", "237 Main st.", 29)
 jack = Person.new("Jack", "QA", "1010 Center st.", 29)
 
 people = [alex, dave, nick, jack]
-
 ```
 
 Filtering elements by attribute equality.
 
 ```rb
 people.choose(:profession => "Programmer") # => [alex, dave]
-
 ```
 
 Filtering elements by attribute equality and inclusion.
 
 ```rb
 people.choose(:profession => "Designer", :age => (29..32)) # => [nick]
-
 ```
 
 Filtering elements by matching regexp.
 
 ```rb
 people.choose(:address => /Main/) # => [dave, nick]
-
 ```
 
 Filtering elements by instance evaluating string.
 
 ```rb
 people.choose("age >= 29") # => [dave, nick, jack]
-
 ```
 
 ## Contributing
