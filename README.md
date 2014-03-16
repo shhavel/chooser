@@ -55,6 +55,12 @@ Filtering elements by instance evaluating string.
 people.choose("age >= 29") # => [dave, nick, jack]
 ```
 
+Rejecting elements with #choose_not method.
+
+```rb
+people.choose_not(:profession => "Programmer") # => [nick, jack]
+```
+
 ## Contributing
 
 1. Fork it ( http://github.com/<my-github-username>/chooser/fork )

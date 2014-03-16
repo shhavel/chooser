@@ -20,6 +20,10 @@ module Chooser
     end
     ary
   end
+
+  def choose_not(selector)
+    self - choose(selector)
+  end
 end
 
 class Array

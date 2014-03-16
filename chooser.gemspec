@@ -9,7 +9,13 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Alexander Avoyants"]
   spec.email         = ["shhavel@gmail.com"]
   spec.summary       = %q{Provides short interface for choosing elements from array of structs.}
-  spec.description   = %q{Provides short interface for choosing elements from array of structs, e.g. target.choose(:street => "Main", :age => (24..30), :address => /Main/) or target.choose("age >= 24 && address =~ /^Main/")}
+  spec.description   = %q{Provides short interface for choosing elements from array of structs.
+Filtering by equality, matching and inclusion, e.g.:
+  target.choose(:street => "Main", :age => (24..30), :address => /Main/)
+Filtering by instance evaluated string, e.g.:
+  target.choose("age >= 24 && address =~ /^Main/")
+Rejecting elements with #choose_not method, e.g.:
+  target.choose_not(:street => "Main")}
   spec.homepage      = ""
   spec.license       = "MIT"
 
