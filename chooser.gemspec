@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Chooser::VERSION
   spec.authors       = ["Alexander Avoyants"]
   spec.email         = ["shhavel@gmail.com"]
-  spec.summary       = %q{Provides short interface for choosig elements from array of structs.}
-  spec.description   = %q{Provides short interface for choosig elements from array of structs, e.g. target.choose(:street => "Main", :age => [24..30]) or target.choose("address =~ /Main/")}
+  spec.summary       = %q{Provides short interface for choosing elements from array of structs.}
+  spec.description   = %q{Provides short interface for choosing elements from array of structs, e.g. target.choose(:street => "Main", :age => (24..30), :address => /Main/) or target.choose("age >= 24 && address =~ /^Main/")}
   spec.homepage      = ""
   spec.license       = "MIT"
 

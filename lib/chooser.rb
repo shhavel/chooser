@@ -16,7 +16,7 @@ module Chooser
         ary << ob if !!ob.instance_eval(selector)
       end
     else
-      raise ArgumentError, 'Supply an options hash (e.g. target.choose :street => "Main", :age => [24..30]) or evaluated string (e.g. target.choose "address =~ /Main/").'
+      raise ArgumentError, 'Supply an options hash (e.g. target.choose :street => "Main", :age => (24..30), :address => /Main/) or evaluated string (e.g. target.choose "age >= 24 && address =~ /Main/").'
     end
     ary
   end
